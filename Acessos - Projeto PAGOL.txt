@@ -1,0 +1,179 @@
+Acessos - Projeto PAGOL
+
+- Grafana:
+
+https://nocmastersupport.grafana.net/a/grafana-oncall-app/?page=incidents&status=0&status=1
+
+----------------------------------------------
+analises dos incidentes que surgirem durante os turnos - novo grafana - PAGOL e Carguero
+
+https://nocmastersupport.grafana.net/d/nVcL_A54k/alertas-history?orgId=1
+
+-----------------------------------------------
+Monitoramento - especial - PAGOL
+
+https://nocmastersupport.grafana.net/d/FuTEeo04z/apig-requests?orgId=1
+
+
+------------------------------------------------
+dashboard para PAGOL para geração de relatório
+
+https://nocmastersupport.grafana.net/d/4Vq8i1c4k/dashboard-report?orgId=1&refresh=10s
+
+------------------------------------------------
+Incidente Grafana
+
+https://nocmastersupport.grafana.net/a/grafana-incident-app/incidents
+
+-------------------------------------------------
+
++ Sistema de abertura de chamados (glpi) 
+
+https://glpi.prod.cloud.dnxbrasil.com.br/index.php?noAUTO=1
+
+Acesso: gustavo.barros@vibetecnologia.com
+Senha: lgcb@12345
+
+Nome de usuário: noc-vibe@vibetecnologia.com
+Senha: Wag78966
+
+Origem de login: Vibe Azure Active Directory
+
+--------------------------------------------
+Acionamentos por e - mail:
+
+gustavo.sabadini@pagol.com.br
+
+NOC
+
+----------------------------------------------
+
+
+Fluxo de atendimento
+
+Nível de Serviço	Analista/Equipe/Gestor
+
+N1				NOC
+N2 (DNX)			Antonio Kayo
+N3 (PAGOL)			Gustavo Sabadini
+N4 (PAGOL)			Marcalo Ribeiro
+
+
+--------------------------------------------------
+
+Tipo de acionamento
+
+i.     Slack
+ii.    Telefone
+iii.   E-mail
+
+
+------------------------------------------------
+
+Ambiente HML - 
+
+dentro do horário comercial – 09h as 18h
+
+•	N2 –Antonio (DNX)
+•	N3 –Gustavo (PAGOL)
+•	N4 –Marcelo (PAGOL)
+
+fora do horário comercial – 18h as 09h
+
+a.	Não deve haver acionamento fora do horário comercial.
+
+-----------------------------------------------------
+
+Ambiente PRD 
+
+dentro do horário comercial – 09h as 18h
+
+•	N2 –Antonio (DNX)
+•	N3 –Gustavo (PAGOL)
+•	N4 –Marcelo (PAGOL)
+
+
+fora do horário comercial – 18h as 09h
+
+a.	N4 – Marcelo (PAGOL)
+
+
+-------------------------------------------------
+
+- fluxo de trabalho
+
+1 - Reconhecer o alerta no SLACK;
+
+2 - Acessar o GLPI e categorizar o alerta como Relatar Falha; no intervalo de 30minutos devido ao SLA e fechar os chamados durante o turno.
+
+3 - Acompanhar a normalização do alerta e caso nao normalizar, marcar o analista da PAGOL (fora do expediente e final de semana) para ter conhecimento e iniciar as tratativas de normalização.
+
+4 - E caso de nenhuma tratativa de normalização ligar para o proprio. (Como este ambiente ainda encontra-se em homologação ainda nao ligar)
+
+-------------------------------------------------
+
+wiki - noc - vibe - PAGOU
+
+https://wiki-noc.herokuapp.com/login
+
+login: fabricio.oliveira@vibetecnologia.com
+senha: iKkWI@2022
+
+--------------------------------------------------
+
+
+
+---------------------------------------------------------
+Novos Alertas - #pagol_noc_produção
+
+Olá, time!
+
+Para conhecimento sobre a informação do cliente.
+
+Mantemos as nossas orientações, até o momento:
+
+Os alertas de produção deverão ser informados no novo grupo do slack #pagol_noc_produção e marcar o Sr. @gustavo Sabadini para tomar ciência e providências;
+Os demais alertas que não forem de produção continuarão no grupo #noc_pagol
+ 
+Obs.: Ficamos no aguardo do time da DNX ajustar os alertas de produção para serem direcionados para o grupo #pagol_noc_produção.
+
+Demais dúvidas, estou à disposição.
+
+-------------------------------------------------------------------------------------
+
+monitoramento especial - PAGOL
+
+
+API REQUESTS - PROCEDIMENTO
+
+URL de monitoramento:
+
+https://nocmastersupport.grafana.net/d/FuTEeo04z/apig-requests?orgId=1&from=now-24h&to=now
+
+procedimento: 
+
+- Em caso de alertas, ou qualquer anomalia neste gráfico (ultrapassando 100 requisições por um período de 2 minutos), devemos seguir o seguinte scalation abaixo .
+
+
+Acionamento:
+
+1- Diego Ramos (horário comercial)
+2- Diego Gimenez (24x7) - 11 99989-2503
+3- Marcelo Henrique (24x7) - 11 93387-3322
+4- Leonardo Cestaroli (24x7) - 11 99637-8598
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,157 @@
+ VIBE - Equipe crédito Projeto
+
+smartfone
+
+login: 91 98390 - 3904 ou arg070707@gmail.com
+senha: Lgcb@123456
+
+-------------------------
+gov.br
+
+login: 11854688707
+
+senha: Arg@070707
+
+----------------------------------
+conceitos:
+
++ trunk - é a linha principal de desenvolvimento. é nele que o projeto deve ser basear sempre
+
++ branch - é uma cópia do código derivado de um certo ponto do trunk que é utilizado para fazer mudanças no código
+
++ merge - é quando o que é produzido na branch volta para integrar o trunk 
+
++ tag - é um marcador de um estado do código em um  determinado momento. É um ponto no trunk ou em uma branch que vc deseja preservar
+
+--------------------------------------
+pasta - projetos na nuvem vibe
+
+https://vibedesenv.sharepoint.com/sites/RenegociaodeConsignado/Shared%20Documents/General/PROJETOS/05_TREINAMENTOS/01_Neg%c3%b3cio
+
+
+------------------------------------
+
+C:\PD_Bank\PD_CRED_4790\REPORTS
+
+--------------------------------------
+
+
+--------------------------------------
+SVN - servidor a ser baixo a imagem
+
+VMWare
+
+https://10.0.2.150/svn/vibe/CONTRATO_015_2016/DESENV/SISTEMAS_CREDITO/PD_CRED/branches/Codigo_fonte/APP/PD_CRED_4790
+
+https://desenv-gecac.desenv.com/svn/vibe/CONTRATO_015_2016/instalacao_software/VM_VB
+
+Acesso SVN------------
+
+usuário: vibe_sferreira
+
+Senha: C@scaes1307
+
+Acesso VM-----------------
+
+Login:BD
+Senha:pd99pd
+
+------------------------------------------
+PD_Cred (VM)
+
+login: pd
+
+Senha: pdpcre
+
+------------------------------------------
+usuário de rede - Sandro
+
+usuário: vibe_sferreira
+
+Senha: C@scaes1307
+
+
+-----------------------------------------
+VPN - Acessos
+
+Nome da VPN: VIBEVPN
+
+login: gustavo.barros@vibetecnologia.com
+
+Senha: lgcb@12345
+
+IP: 10.0.20.90 (maquina do sandro)
+
+----
+acesso especial (VPNBKP)
+
+usuário: gustavo.barros@vibetecnologia.com
+Senha: lgcb@12345
+
+-----------------------------------------------
+Acesso a rede banpara:
+
+Usuário: vibe_lbarros
+Senha padrão: L@123456
+
+123456Ab
+
+------------------------------------------------
+ezure DevOps - on board - card - projeto vibe crédito
+
+https://dev.azure.com/vibedesenvolvimento/Credito/_boards/board/t/Arq%20Legado/Stories
+
+https://dev.azure.com/vibedesenvolvimento/
+
+Usuário: gustavo.barros@vibetecnologia.com
+Senha padrão: lgcb@12345
+
+----------------------------------------------------
+servidores de produção
+
+10.0.2.199,53679\sqlclust06 -- servidor 06 (crédito - sustentação)
+10.0.2.199,50242\sqlclust04 -- servidor 04 (crédito - projetos)
+
+10.0.2.237,2063\sqlclust05 -- servidor 05 (crédito - base antiga)    
+
+
+
+usuario: pd_casent
+senha: pdnt
+
+--------------------------------------------------
+Banco de dados de testes
+
+
+SQLExpress
+
+VBNTBE3N0B\SQLEXPRESS
+
+
+
+---------------------------------------------
+swagger
+
+http://10.0.21.43/scmcWebApi/swagger/ui/index#/Consignado/Consignado_CarregaClientesRenovacao
+
+------------------------------------------------
+
+Projetos - Base legado - Cards
+
+PD_Desenv (roxo)
+PD_Rede (azul)
+PD_Cred (verde)
+
+(Doing) - sendo homologados pelos gestores
+
+(Done) - já foram homologados
+
+raia Expedite - apresentar os requisitos que estão sendo desenvolvidos de forma prioritária, com máxima urgência
+
+raia Bloqueio - , tem a função de abrir temporariamente os requisitos que estão impedidos de prosseguir com a sua implementação
+
+Raia Comum - é onde todos os requisitos que não possuem máxima urgência são desenvolvidos, ou seja, os requisitos que seguem o fluxo de trabalho padrão.
+
+User Story - são utilizados para representar os requisitos de entrega de valor do projeto e a eles podem ser definidas uma ou várias Tarefas
+
+tipo Bug - são utilizados para representar os defeitos encontrados em um card do tipo User Story durante a etapa de testes

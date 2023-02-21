@@ -1,0 +1,23 @@
+VPN do banpara:
+
+10.0.5.58 , 10.0.5.187
+
+-----------------------------
+VPN
+
+Login: master_lbarros@banpara.com
+
+Senha: L@123456
+
+--------------------------------------
+Rede banpara
+
+Login: master_lbarros@banpara.com
+
+Senha: L@123456
+
+--------------------------------------
+Junior
+
+Login: master_jjunior
+Senha: @JRm#1105

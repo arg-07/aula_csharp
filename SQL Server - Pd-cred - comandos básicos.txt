@@ -1,0 +1,613 @@
+SQL Sever - Base pd_cred:
+
+comandos básicos:
+
+1 - Ocultar e desocultar o resultado das querys
+
+Ctrl + r
+
+---------------------------------------------------
+
+1 - PROCURAR O NOME DO RELATÓRIO VIA BASE DE DADOS (é a mais usada)
+
+select top 20 * from CadTrs
+where intGrpTrs_Cod = 3 and vchTrs_Nom like '%contrato%'
+
+-----------------------------
+2 - PROCURAR O NOME DO RELATÓRIO VIA BASE DE DADOS:
+
+use pd_cred
+go
+
+select top 20 * from CadTrs
+where intGrpTrs_Cod = 3 and vchTrs_Nom like '%contrato%'
+
+
+-- comando usado para achar o relatório do VB6 através da base de dado do pd_cred
+
+-----------------------------
+2 - EXTRAIR O CONTEÚDO DAS PROCEDURES (é a mais usado)
+
+sp_helptext (sp_buscapalavra)
+
+------------------------------
+2 - comando para não lockar a tabela da consulta
+
+with(nolock)
+
+OBS: trava a tabela para o comando select e usa somente com os dados atuais... não incluindo os update e insert
+
+OBS: esse comando é usado após a descrição das tabelas
+
+Ex:
+
+select distinct vchcli_cpf from crdlimcli with(nolock)
+-----------------------------
+
+2 - comando para achar procedure na base:
+
+select top 10 * from sysobjects where xtype = 'P'
+
+--------------------------------
+
+3 - comando para achar procedure através da palavra chave:
+
+exec sp_buscapalavra 'posição'
+
+----------------------------------
+4 - Quando as procedures para de rodar
+
+exec [dbo].[Sp_CancelaAutoFixoRotativo]
+
+---------------------------------
+
+4 - comando para melhor a busca da consulta da procedure ( é a mais usada)
+
+select distinct name as Procedures  
+  from syscomments c  
+      ,sysobjects  o  
+ where c.id = o.id  
+   and o.name like('sp_rpt%posição%')  
+order by name
+
+ 
+OBS: toda procedure começa com sp_rpt para geração de relatório
+
+---------------------------------------
+
+4 - Procedure para mensuração dos tamanhos dos objetos da base de dados
+
+
+execute sp_spaceused 'Teste01' 
+
+
+--------------------------------------
+
+4 - comando para consultar a existencia da nossa procedure
+
+------
+
+Select object_id, name,create_date, modify_date 
+  From sys.objects 
+ Where name = 'stp_MovimentoDoDia'
+go
+
+---------
+
+Select * from sys.procedures
+ Where name = 'stp_MovimentoDoDia'
+go
+
+----------
+
+select object_id('stp_MovimentoDoDia')
+go
+select object_id('stp_MovimentoDoDia_NaoExiste')
+go
+
+----------------------------------------
+
+(comando que limpa BUFFERS e o CACHE de procedures do banco sqlserver)
+
+DBCC DROPCLEANBUFFERS 
+go
+DBCC FREEPROCCACHE 
+go
+
+-----------------------------------------
+(comnado que liga o statistics io e o statistics time)
+
+set statistics io on 
+set statistics time on 
+go
+
+
+-----------------------------------------
+
+5 - EXTRAIR O CONTEÚDO E A ESTRTURAS DAS TABELAS
+
+sp_help <nome_da_tabela>
+
+Ex:
+
+sp_help tCADEmpresa
+
+---------------------------------------------
+demostra o espaço utilizado pela minha tabela
+
+sp_spaceused <'nome_da_tabela'>
+
+Ex:
+
+sp_spaceused 'tCliente'
+
+-----------------------------------------------
+traz as informações técnicas de alocação da minha tabela e suas devidas colunas:
+
+sp_help <'nome_da_tabela'>
+
+Ex:
+
+sp_help 'tCliente'
+
+--------------------------------------------------
+Ativação e desativação do plano de execução no formato XML
+
+set statistics xml on - comando que ativa a visualização do plano de execução no formato XML
+
+set statistics xml off - comando que desativa a visualização do plano de execução no formato XML
+
+OBS: o comando de ativação tem que ser dada no começo da instrução e o comando de desativação tem que ser dado no final da desativação
+
+-------------------------------------------------
+procedure do sistema que vai analisar a tabela e vai dá uma estimativa de compressão
+
+EXEC sp_estimate_data_compression_savings 'dbo', 'tCliente', null, NULL, 'PAGE' ;  
+go
+
+- procedure do sistema que vai analisar a tabela e vai dá uma estimativa de compressão
+
+descrevendo os parametros da procedure:
+
++ parametro I: ('dbo') - esquema da minha tabela
+
++ parametro II: ('tCliente') - nome da minha tabela
+
++ parametro III: (null) - qual é a partição no qual minha tabela está
+
++ parametro IV: (NULL) - qual é o indice que será usado (caso exista)
+
++ parametro V: ('PAGE') - qual é o médoto de comapctação npo qual eu quero realizar a minha estimativa
+
+-----------------------------------------------
+
+compactar a minha tabela:
+
+ALTER TABLE dbo.tCliente
+      REBUILD PARTITION = ALL  
+	  WITH (DATA_COMPRESSION = PAGE)   
+go
+
+descrevendo o código:
+
+- REBUILD PARTITION = ALL - comando que irá realziar um overview em toda a minha tabela
+
+- WITH (DATA_COMPRESSION = PAGE)  - comando que irá compactar com base nas minhas páginas
+
+---------------------------------------------
+comandos para analisar indices nas tabelas da base
+
+sp_helpindex 'tCliente'
+
+sp_pkeys 'tCliente'
+
+
+----------------------------------------------
+
+5. Exibindo dependência de uma SP
+
+SELECT referencing_schema_name, 
+       referencing_entity_name, 
+       referencing_id, 
+       referencing_class_desc, 
+       is_caller_dependent  
+  FROM sys.dm_sql_referencing_entities ('dbo.stp_MovimentoDoDia', 'OBJECT');   
+
+go
+
+-------------------------------------------
+
+6 - comando usado para atualização das informações nos campos (update)
+
+use pd_cred
+go
+
+update cadparger
+set intParGer_RenAutLim = 15, intParGer_RenRetRes = 15
+
+----------------------------------------------------
+
+6. Quais os objetos utilizados pela Procedure
+
+ 
+SELECT distinct referenced_schema_name as bases, 
+       referenced_entity_name as Entides_referenciadas, 
+       referenced_id as IDs_de_referencias
+  FROM sys.dm_sql_referenced_entities ('dbo.stp_MovimentoDoDia', 'OBJECT');
+
+-----------------------------------------------------
+7 - Teste para verificar se o backup do banco de dados está correto.
+
+RESTORE FILELISTONLY FROM DISK = 'C:\Database\BackupFiles\eCommerce_v12-5-01.bkp' 
+RESTORE VERIFYONLY FROM DISK   = 'C:\Database\BackupFiles\eCommerce_v12-5-01.bkp' 
+
+----------------------------------------------------------
+7 - restaurar backup e mover arquivo
+
+
+RESTORE DATABASE [eCommerce] 
+FROM DISK = 'C:\Database\BackupFiles\eCommerce_v12-5-01.bkp'
+WITH 
+MOVE 'eCommercePrimary' TO 'C:\Database\DataBaseFiles\eCommercePrimary.mdf',
+MOVE 'eCommerceHistorico' TO 'C:\Database\DataBaseFiles\eCommerceHistorico.ndf',
+MOVE 'eCommerceTransacional' TO 'C:\Database\DataBaseFiles\eCommerceTransacional.ndf',
+MOVE 'eCommerceIndicesHistorico' TO 'C:\Database\DataBaseFiles\eCommerceIndicesHistorico.ndf',
+MOVE 'eCommerceIndicesTransacional' TO 'C:\Database\DataBaseFiles\eCommerceIndicesTransacional.ndf',
+MOVE 'eCommerceLog' TO 'C:\Database\LogFiles\eCommerceLog.ldf',
+NOUNLOAD,  STATS = 1 , REPLACE 
+go
+
+--------------------------------------------------------
+7 - comando usado para inserir novos campos na tabela:
+
+use pd_cred
+go
+
+alter table cadparger
+add intParGer_RenAutLim int, intParGer_RenRetRes int
+
+
+-----------------------------------------
+7 - procedure para verificar configuração do servidor SQL Server
+
+
+execute sp_configure
+go
+
+------
+usando o comando de uma forma melhorada
+
+execute sp_configure 'show advanced options' , 1
+go
+reconfigure with override
+
+------
+podemos fazer essa analise com valores especificos
+
+execute sp_configure 'min server memory (MB)'
+execute sp_configure 'max server memory (MB)'
+
+-------------------------------------------
+comando para ligar e desligar estatístisca do sql server
+
+set statistics io on -- Ligar a apresentação
+set statistics io off -- Desligar a apresentação
+
+---------------------------------------------
+
+8 - Verificar a existencia de trigger dentro de uma tabela
+
+EXEC sp_helptrigger @tabname = nome_tabela
+
+Ex:
+
+EXEC sp_helptrigger @tabname = tbl_editoras
+
+-------------------------------------------
+8 - comando para verificação de memória do sql server (views dinamica)
+
+
+select total_physical_memory_kb / 1024.0     as MemoriaTotal ,
+       available_physical_memory_kb / 1024.0 as MemoriaDisponivel 
+from sys.dm_os_sys_memory
+
+Resposta:
+
+MemoriaTotal	MemoriaDisponivel
+------------   -----------------
+ 2047.421875	       403.734375
+
+-----------------------------------------------------------------
+8 - configuração de máximo e minimo de memória:
+
+execute sp_configure 'min server memory (MB)' , 512
+go
+reconfigure with override 
+go
+execute sp_configure 'max server memory (MB)' , 1536
+go
+reconfigure with override
+
+--------------------------------------------------------------------
+8 - Consultando a quantidade de páginas no Buffer Pool ocupada por cada
+banco de dados.
+
++ consulta genérica
+
+select * from sys.dm_os_buffer_descriptors
+
++ consulta mais especifica (views dinamicas)
+
+select db_name(database_id) as BancoDeDados, 
+       (count(1) * 8192 ) / 1024 /1024 as nTamanhoPaginas 
+  from sys.dm_os_buffer_descriptors
+group by db_name(database_id)  
+go
+ 
+
+----------------------------------------------------------------------
+Procedures de sistemas
+
+
+SP_HELP - Retorna informações sobre um objeto do banco de dados. 
+
+SP_HELPTEXT - Retorna as definições de regras (em alguns caso, código) de
+              procedure, função, trigger, coluna computada ou restrição 
+
+SP_OACREATE - Cria um instância de um objeto OLE (Object Linked Embedding)
+
+As que começam com XP_, tem associado uma DLL.
+
+XP_CMDSHELL - Executa um comando do Windows.
+
+XP_FILEEXIST - Verificar se um arquivo existe (Procedure não documentada pela Microsoft)
+
+---------------------------------------------
+
+8. Renomear uma procedure.
+
+- Não perde as permissões 
+- Verificar antes as dependências de outros obejtos com a procedure.
+
+sp_rename <'nome_antigo'> , <'novo_nome'>
+
+Ex:
+
+sp_rename 'dbo.stp_MovimentoDoDia' , 'stp_PedidosDoDia
+
+--------------------------------------------
+Encontrando views em nosso banco de dados
+
+-- Apresenta todas as view contida no seu banco de dados associado
+
+Select * From sys.views 
+ 
+-- Apresenta uma busca por uma view especifica 
+
+Select * From sys.views 
+Where name = 'vCADEstoqueLivro'
+
+-- Apresenta uma busca por uma Colunas especifica associadas a view 
+
+Select * From sys.columns
+Where object_id = object_id('vCADEstoqueLivro')
+
+-- Apresenta uma busca por uma Tabelas referenciadas pela view
+ 
+Select * From sys.sql_expression_dependencies 
+Where referencing_id = object_id('vCADEstoqueLivro')
+
+-- Mostra o código associado a view 
+
+Select * From sys.sql_modules
+ Where object_id = object_id('vCADEstoqueLivro')
+
+-----------------------------------------
+
+9 - Verificar a existencia de trigger dentro de uma base de dados
+
+use pd_cred
+go
+
+select * from sys.triggers
+where is_disabled = 0 or is_disabled = 1
+
+OBS:
+
+0 = triggers desabilitadas
+1 = triggers habilitadas
+
+---------------------------------------------
+10 - habilitando e desabilitando triggers
+
++ habilitando 
+
+alter table tbl_editoras
+enable trigger tg_CadParGerLog
+
++ desabilitando 
+
+alter table tbl_editoras
+disable trigger tg_CadParGerLog
+---------------------------------------------------
+10 - Procedures de sistemas:
+
+-- Mostra a definição da view.
+ 
+execute sp_help vCADEstoqueLivro
+go
+
+-- Mostra o código associado a view
+ 
+execute sp_helptext vCADEstoqueLivro
+go
+-----------------------------------------
+
+10. Verificando o desempenho de execução.
+
+
+Select * From sys.dm_exec_procedure_stats
+
+-------------------------------------------
+
+11 - (forum de soluções de erros)
+
+https://docs.microsoft.com/pt-br/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-2017
+
+-------------------------------------------------------
+11 - SQL Server Acessando Logs de Erros via programação: 
+
+execute sp_readerrorlog  -- Leitura do arquivo atual 
+
+execute sp_readerrorlog  1  --Leitura do arquivo Anterior 
+
+execute sp_readerrorlog  0 , 1, 'Error'
+
+
+-----------------------------------------------
+
+11 - Comando responsável por exibir a tabela de erro contida no sistema engine sql server:
+
+SELECT m.message_id , 
+       m.language_id , 
+       l.alias , 
+       m.severity , 
+       m.is_event_logged , 
+       m.text
+  FROM sys.messages m
+  Join sys.syslanguages l 
+    on m.language_id = l.lcid
+    WHERE message_id = 18456 and alias = 'Brazilian'
+
+
+descrição do código:
+
+sys.messages - tabela de catalago - onde dentro dela eu tenho todas as minhas mensagens armazenadas
+
+sys.syslanguages - tabela contendo o catalago de todas as linguas contidas no sql server
+
+message_id - campo responsável por armazenar os ids das mensagens de erro
+
+alias - campo responsável pelo tipo de linguagem da messagem de erro
+
+-------------------------------------------------------------------------11 - Usando o SQL Server e o Event Viewer
+
+- utilizando uma procedure de sistema que registra uma mensagem no SQL Server Log
+e no windows Event Viewer.
+
+Proceudre de sistema: XP_LOGEVENT
+
+
+
+------------------------------------------------------------------------
+12 - contratos autorizados
+
+use pd_cred
+go
+
+select * from CrdCtr
+where vchCli_Cpf = '37275593220' and chrCtr_Sta <> 'L'
+
+
+------------------------------------------------------------------------
+13 - URL1: (forum de soluções de erros)
+
+https://docs.microsoft.com/pt-br/sql/relational-databases/errors-events/database-engine-events-and-errors?view=sql-server-2017
+
+-------------------------------------------------------------------------
+
++ indices do filtro where: (intGrpTrs_Cod)
+
+1 - Transaçoes principal (cadastro basico do sistema)
+2 - Tela de processamento
+3 - Relatório
+
++ campo = nome do relatório (vchTrs_Nom)
+
+Ex: CONTRATOS POTENCIAIS
+
++ campo código do relatório (vchTrs_Frm)
+
+Ex: FRMRPTCTRPOT
+
+
+-------------------------------------------------------------------------
+15 - PROCEDURE PARA PROCURAR PROCEDURE
+
+sp_helptext sp_buscapalavra
+
+- Essa procedure é uma instrução sql que faz uma varredura dentro do banco de dados
+
+- ela pega a tabela de comentários e concatena com a tabela de objetos
+
+- E procura dentro desse texto concatenado uma procedure 
+
+
+------------
+
+código dentro da procedure
+
+--exec sp_buscapalavra 'teste'  
+Create procedure sp_BuscaPalavra (  
+   @pvchPalavra as varchar(100)  
+)  
+as  
+select distinct name as Procedures  
+  from syscomments c  
+      ,sysobjects  o  
+ where c.id = o.id  
+   and text like('%' + @pvchPalavra + '%')  
+order by name 
+
+-------------------------------------------
+16 - comando para achar procedure na base:
+
+- select top 10 * from sysobjects where xtype = 'P'
+
+- select top 10 * from syscomments where id = 2007684 
+
+indices:
+
+sysobjects - tabela de objetos
+
+syscomments - tabela de comentários
+
+campo: 
+
+- xtipe: 
+
+"P" - procedure  
+
+"U" - tabela
+
+OBS: toda procedure possui um ID nessas tabelas contida nessa procedure
+
+-------------------------------------------------------------------------
+17 - SQL Server Acessando Logs de Erros via programação:
+
+execute sp_readerrorlog  -- Leitura do arquivo atual 
+
+execute sp_readerrorlog  1  --Leitura do arquivo Anterior 
+
+execute sp_readerrorlog  0 , 1, 'Error'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

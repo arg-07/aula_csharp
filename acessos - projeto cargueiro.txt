@@ -1,0 +1,253 @@
+acessos - projeto cargueiro
+
+Repasse 1:
+
+- O dashboard é generico - vai servir para vários clientes
+
+- A equipe do NOC - Suporte que irá montar os alertas no decorrer do projeto
+
+- tudo que faz no grafana... vai para o cliente em forma de slack
+
+- OS alertas tem até 5 minutos para serem reconhecidos... antes da própria ferramenta escolar para os coordenadores via teams e slack
+
+---------
+
+wiki - noc - vibe - Carguero
+
+https://wiki-noc.herokuapp.com/login
+
+login: fabricio.oliveira@vibetecnologia.com
+senha: iKkWI@2022
+
+
+------------------------------------------------------------------------
+Grafana - pods (Prometheus/Container Resource Usage)
+
+
+https://grafana-noc.prod.cloud.dnxbrasil.com.br/d/x2csZIt7z/container-resource-usage?viewPanel=5&orgId=1
+
+
+-------------------------------------------------------------------------
+
+segundo acesso: (Daynatrace)
+
+Login: fabricio.oliveira@vibetecnologia.com
+
+Senha: C@rguero.2022
+
+-------------------------------------------------------------------
+API - Carguero (em manutenção 18/09/2022 - 10:00 - realizar testes)
+
+https://api-ldccargueiro.com.br/health
+
+---------------------------------------------------------------------
+Grafana - HTTP Response
+
+
+https://grafana-noc.prod.cloud.dnxbrasil.com.br/d/Z1N1pin4k/http-response?orgId=1
+
+-----------------------------------------------------------------------
+Fluxo de acionamento:
+
++ Os alertas irão surgir na seguinte ordem:
+
+1 - Slack
+2 - Grafana
+3 - Teams (grupo Vibe)
+
++ Ações a seguir:
+
+- Reconhecer alerta
+
+- Acompanhar normalização do alerta em até 5 minutos
+
+- Se não normalizar, acionar o sobreaviso. (CARGUERO)
+	
+- Abrir chamado no GLPI.
+
+
+------------------------------------
+
++ Sistema de abertura de chamados (glpi) 
+
+https://glpi.prod.cloud.dnxbrasil.com.br/index.php?noAUTO=1
+
+Acesso: gustavo.barros@vibetecnologia.com
+Senha: lgcb@12345
+
+Origem de login: Vibe Azure Active Directory
+
+------------
+
+
+Nome de usuário: noc-vibe@vibetecnologia.com
+Senha: Wag78966
+
+-----------------------------------
+Grafana - projeto cargueiro (dashboard inicial)
+
+URL: https://grafana-noc.prod.cloud.dnxbrasil.com.br/login
+
+OBS: acessar com o botão sign in with microsoft
+
+Acesso: gustavo.barros@vibetecnologia.com
+Senha: lgcb@12345
+
+OBS: acessar com o botão sign in with microsoft
+
+-------
+grafana - prometheus
+
+https://grafana-noc.prod.cloud.dnxbrasil.com.br/d/nyzPcRm4z/kubernetes-node-resource-usage?orgId=1
+
+--------
+grafana - Daynatrace (desativado)
+
+https://grafana-noc.prod.cloud.dnxbrasil.com.br/d/TiuH0YzVk/services-dynatrace?orgId=1
+
+---------
+Grafana OnCall (Antigo - Desativado)
+
+https://grafana-noc.prod.cloud.dnxbrasil.com.br/a/grafana-oncall-app/?page=incidents&status=0&status=1&status=2
+
+-----------
+Grafana OnCall (Novo - Em Produção)
+
+https://nocmastersupport.grafana.net/a/grafana-oncall-app/?page=incidents&status=0&status=1
+
+
+---------------
+Grafana de alertas
+
+https://grafana-noc.prod.cloud.dnxbrasil.com.br/d/8WkM5lkVz/alertas-carguero?orgId=1&refresh=1m
+
+-----------------------------------
+slack
+
+https://app.slack.com/client/
+
+https://vibetecnologiagrupo.slack.com/?redir=%2Fgantry%2Fclient 
+
+url inicial: noc-slack
+
+login: noc-slack@vibetecnologia.com
+senha: Yad37999
+
+login: felipe.freitas@vibetecnologia.com
+Senha: 2212! @Fe
+
+--------------------------------------
+teams 
+
+- Grupo do projeto Cargueiro
+
+----------------------------------------
+Azure AD
+
+Nome de usuário: noc-vibe@vibetecnologia.com
+Senha: Wag78966
+
+------------------------------------
+Daynatrace (suspenso)
+
+login: gustavo.barros@vibetecnologia.com
+Senha: Lg@123456789
+
+URL:
+
+https://sso.dynatrace.com/action/signin?goto=https%3A%2F%2Fsso.dynatrace.com%3A443%2Foauth2%2Fauthorize%2Fredirect%3Fmetadata%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJvQXV0aDJSZXF1ZXN0Iiwic2NvcGUiOiJvcGVuaWQgc3RvcmFnZTpldmVudHM6cmVhZCBzdG9yYWdlOmxvZ3M6cmVhZCBzdG9yYWdlOm1ldHJpY3M6cmVhZCBjbG91ZGF1dG9tYXRpb246aW50ZWdyYXRpb25zOnJlYWQgY2xvdWRhdXRvbWF0aW9uOmludGVncmF0aW9uczp3cml0ZSBjbG91ZGF1dG9tYXRpb246bWV0YWRhdGE6cmVhZCBjbG91ZGF1dG9tYXRpb246cHJvamVjdHM6cmVhZCBjbG91ZGF1dG9tYXRpb246cHJvamVjdHM6d3JpdGUgY2xvdWRhdXRvbWF0aW9uOnJlc291cmNlczpyZWFkIGNsb3VkYXV0b21hdGlvbjpyZXNvdXJjZXM6d3JpdGUgY2xvdWRhdXRvbWF0aW9uOnNlY3JldHM6cmVhZCBjbG91ZGF1dG9tYXRpb246c2VjcmV0czp3cml0ZSBjbG91ZGF1dG9tYXRpb246c2VydmljZXM6cmVhZCBjbG91ZGF1dG9tYXRpb246c2VydmljZXM6d3JpdGUgY2xvdWRhdXRvbWF0aW9uOnN0YWdlczpyZWFkIGNsb3VkYXV0b21hdGlvbjpzdGFnZXM6d3JpdGUiLCJyZXNwb25zZV90eXBlIjoiY29kZSIsInJlZGlyZWN0X3VyaSI6Imh0dHBzOi8vYWtqMzc1MzYubGl2ZS5keW5hdHJhY2UuY29tIiwic3RhdGUiOiJ0UnF5ZEN3U0F3bXhEUW5ZbTExWkpRTWZHVGhzWHo4RUxHV0pOOEhRbTY0IiwiY29kZV9jaGFsbGVuZ2VfbWV0aG9kIjoiUzI1NiIsImV4cCI6MTY2MDE0Njc3NSwibm9uY2UiOiI4RXRVWDgxVjNTeHkxUFhZeDBXSGN3V090ekxLVGdnaGZDWGRGd3p6OWY0IiwiY2xpZW50X2lkIjoiZHQwczAzLmR5bmF0cmFjZS1jbHVzdGVyLW9pZGMtcHJvZCIsImNvZGVfY2hhbGxlbmdlIjoiY3RFZ3BEQnowSld3TDVyYWZlZFBsWmtHMGh2YTlDdVZKOTN3ZTRRVVk5ZyJ9.V06ZDMKqxA0ckmDc5EkyVzkQg92CzBcDbyCjcOtFHZI#email-verification-page
+
+------------------------------------
+infraestrutura carguero
+
+Nuvem da DNX/VIBE
+
+
++ slack - abertura de chamado cliente (ligado ao grafana)
+
++ teams - canal de comunicação do fornecedor
+
++ grafana - aplicação de centralização de alertas e evidencias 
+
+- O grafana faz a ligação entre os alertas das ferramentas e a abertura de chamado dos incidentes (slack) e o canal de comunicação (teams)
+
+- O grafana estão configurado 4 datasorce (clouwatch, loki, prometheus e inluxDB)
+
+
+OBS:  CloudWatch fornece dados e insights úteis para monitorar suas aplicações, responder às mudanças de performance de todo o sistema e otimizar a utilização de recursos. O CloudWatch coleta dados operacionais e de monitoramento na forma de logs, métricas e eventos.
+
+OBS: grafana loki - responsvel por coletar logs da aplicação
+
+
+OBS: prometheus serve para exibir métricas em painéis muito elegantes e úteis
+
+OBS: inluxDB É um banco de dados de código aberto designado para lidar com um alto volume de consultas e escritas por segundo sem causar muito impacto - inluxDB server para coisas personalizadas do projeto carguero
+
+
+--------------
+
+Nuvem da carguero
+
+- Alguns recurso dessas nuvens estão em rede privadas que não estão acessiveis publicamente
+
+aplicações da carguero
+
+OBS: POD K8s Custom collect - Um pod do Kubernetes é um conjunto de um ou mais containers Linux®, sendo a menor unidade de uma aplicação Kubernetes. Os pods são compostos por um container nos casos de uso mais comuns ou por vários containers fortemente acoplados em cenários mais avançados.
+
+OBS: pods na infraestrutura carguero são aplicações que rodam dentro de um contêiner e são gerenciado e monitorado pelo kubernetes
+
+OBS: Kubernetes (K8s) é um produto Open Source utilizado para automatizar a implantação, o dimensionamento e o gerenciamento de aplicativos em contêiner.
+
+OBS: endpoints -  são pontos de acessos que fazem a ligação de uma infraestrutura com outras redes ou aplicações
+
+
+Pod k8s caddy proxy - é um proxy reverso que através dele nós podemos ter acesso as aplicações na nuvem privada da carguero
+
+OBS: Pod k8s caddy proxy - esse proxy reverso tem acesso pod k8s prometheus e ao pod k8s loki que são aonde é retirado os logs e métricas
+
+OBS: a função do proxy reverso é receber a solicitação de um usuário externo que está tentando acessar o site do seu negócio através de outra rede. Essa solicitação passa para um servidor interno que recebe o resultado da solicitação e a retransmite para o cliente
+
+- as ligações entre a novem da DNX/VIBE e do cliente carguero se dá por dois canais Pod k8s caddy proxy (proxy reverso) e pelo cloudwatch das duas empresas
+
+OBS: existia um pod contendo um dynatrace que era ligado a um dynatrace externo a infraestrutura da carguero que tinha uma ligação com o banco de dados influxDB que tabem fornecia métricas para as aplicações do projeto
+
+OBS: O dynatrace  foi desativado devido os problemas que estavam trazendo para a infraestrutura do projeto
+
+OBS: pod K8s telegraf é o agent do influxDB que coleta as informações e métricas para o influxDB na infraestrutura da DNX
+
+OBS: essa estrutura (influxDB  + pod K8s telegraf) server para colotar informações do SQL Server do cliente carguero
+
+OBS: as URLs do cliente carguero são coletadas tambem pela infraestrutura (influxDB  + pod K8s telegraf)
+
+--------------------------------------
+detalhando Grafana - Carguero
+
+ - o grafana está consumindo e representando informações desses 4 datasource do projeto carguero (clouwatch, loki, prometheus e inluxDB)
+
++ cloudwatch - aponta para o cloudwatch da carguero
+
++ loki - aponta caddy proxy (proxy reverso) da carguero
+
++ prometheus - aponta caddy proxy (proxy reverso) da carguero
+
++ inluxDB - aponta para o pod K8s telegraf da carguero
+
+-------------------------------------------------------------------------
+repasse 2:
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
