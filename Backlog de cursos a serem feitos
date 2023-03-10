@@ -1,0 +1,62 @@
+Backlog de cursos a serem feitos:
+
+
+-------------------------------------------------------------
+ALURA
+
++ programação - computação 
+
+-- swagger: documentando suas APIs (em andamento)
+
++ programação - quality assurance 
+
+-- automatizaçõa de testes
+
++ programação - C#
+
++ programação - .Net
+
++ data science - SQL e Banco de dados
+
+-- Microsoft sql server 2022: conhecendo SQL
+-- Microsoft sql server 2022: consultas avançadas
+-- Modelagem de dados relacionais: I, II, III e IV
+-- sql server: persistindo e recuperando documentos JSON
+-- sql server: T-SQL com microsoft sql 2017
+-- sql server: administração do microsoft sql server 2017
+
++ data science - Engenharia de dados
+
+-- Organizando dados na AWS
+
++ DevOps - builds e controle de versão
+
+-- Git e GitHub: I, II e III
+
++ DevOps - Entrega continua
+
+---------------------------------------------------------------
+
+Flyway - ferramenta para controle de versão de procedure do sql server
+
+sql server - dacpac - 
+
+GIT - Controle de versões
+
+Jenkins - Servidor de integrações continuas
+
+ansible - infraestrtura como código
+
+vagrant - monta ambientes virtualizados de modo automatizados
+
+amazon web service - criação de ambientes em nuvem de forma automatizados
+
+google app engine - criação de ambientes em nuvem de forma automatizados
+
+microsoft azure - criação de ambientes em nuvem de forma automatizados
+
+gerrit - tipos de ferramentas de revisão de código
+
+git-hub pull request - tipos de ferramentas de revisão de código
+
+testes de ataque de injeção de SQL (ferramenta metasploit)
