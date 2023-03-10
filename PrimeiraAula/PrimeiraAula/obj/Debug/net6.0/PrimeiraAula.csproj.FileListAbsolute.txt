@@ -1,0 +1,30 @@
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.exe
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.deps.json
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.runtimeconfig.json
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.dll
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.pdb
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.csproj.AssemblyReference.cache
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.AssemblyInfoInputs.cache
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.AssemblyInfo.cs
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.csproj.CoreCompileInputs.cache
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.dll
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\refint\PrimeiraAula.dll
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.pdb
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.genruntimeconfig.cache
+C:\Users\vibe\Desktop\aulas C sharpe\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\ref\PrimeiraAula.dll
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.exe
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.deps.json
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.runtimeconfig.json
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.dll
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\bin\Debug\net6.0\PrimeiraAula.pdb
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.csproj.AssemblyReference.cache
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.AssemblyInfoInputs.cache
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.AssemblyInfo.cs
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.csproj.CoreCompileInputs.cache
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.dll
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\refint\PrimeiraAula.dll
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.pdb
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\PrimeiraAula.genruntimeconfig.cache
+C:\Users\vibe\Desktop\Git Repo\PrimeiraAula\PrimeiraAula\obj\Debug\net6.0\ref\PrimeiraAula.dll
