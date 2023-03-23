@@ -11,9 +11,9 @@ namespace Course
         {
 
 
-        
+            
 
-        
+        Console.ReadLine();
 
         }
 
@@ -21,6 +21,50 @@ namespace Course
 
 }
 
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+
+//            int N;
+//            N = int.Parse(Console.ReadLine());
+//            string[] vet = new string[N];
+
+//            for (int i = 0; i < N; i++)
+//            {
+//                vet[i] = Console.ReadLine();
+
+//            }
+
+//            Console.WriteLine("Nomes lidos:");
+
+//            foreach(string x in vet) // para cada elemento x que é o apelido contido no vetor vet... eu vou fazer uma coisa
+//            {
+
+//                Console.WriteLine(vet[i]);
+
+//            }
+
+//            Console.ReadLine();
+
+
+//        }
+
+//    }
+
+//}
 
 
 
@@ -53,8 +97,54 @@ namespace Course
 //        static void Main(string[] args)
 //        {
 
+
 //            int N;
-//            N = int.Parse(Console.ReadLine()); 
+//            N = int.Parse(Console.ReadLine());
+//            string[] vet = new string[N];
+
+//            for (int i = 0; i < N; i++) 
+//            {
+//                vet[i] = Console.ReadLine();
+
+//            }
+
+//            Console.WriteLine("Nomes lidos:");
+
+//            for (int i = 0; i < N; i++) 
+//            {
+
+//                Console.WriteLine(vet[i]);
+
+//            }
+
+//            Console.ReadLine();
+
+
+//        }
+
+//    }
+
+//}
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            int N;
+//            N = int.Parse(Console.ReadLine());
 
 //            String[] nomes = new string[N];
 //            int[] idades = new int[N];
@@ -62,7 +152,7 @@ namespace Course
 
 
 //            // Leituras dos dados
-//            for (int i = 0; i < N; i++) 
+//            for (int i = 0; i < N; i++)
 //            {
 
 //                string[] s = Console.ReadLine().Split(' ');
@@ -75,7 +165,7 @@ namespace Course
 
 //            // Calculo da altura media das pessoas
 //            double soma = 0.0;
-//            for (int i = 0; i < N; i++) 
+//            for (int i = 0; i < N; i++)
 //            {
 
 //                soma = soma + altura[i];
@@ -88,11 +178,11 @@ namespace Course
 
 //            // Porcentagem de pessoas abaixo de 16 anos
 //            int cont = 0;
-//            for (int i = 0; i < N; i++) 
+//            for (int i = 0; i < N; i++)
 //            {
 
 
-//                if (idades[i] < 16) 
+//                if (idades[i] < 16)
 //                {
 
 //                    cont++; // isso é igual a cont = cont + 1
@@ -103,7 +193,7 @@ namespace Course
 
 //            }
 
-//            double porcentagem = (double) cont / N * 100.0; // (double) isso garante que os dados não sejam truncados
+//            double porcentagem = (double)cont / N * 100.0; // (double) isso garante que os dados não sejam truncados
 //            Console.WriteLine("Pessoas com menos de 16 anos: " + porcentagem.ToString("F1", CultureInfo.InvariantCulture) + "%");
 
 //            Console.Read();
