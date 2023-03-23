@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.Globalization;
 
@@ -10,41 +11,172 @@ namespace Course
         {
 
 
-            int N;
-            double[] vet; //declaração da variavel vetor
+        
 
-            N = int.Parse(Console.ReadLine());
-
-            vet = new double[N]; //instanciação da variavel vetor
-
-            // OBS: a instanciação da variavel vetor deverá ser ocorrer depois da coleta das informações da 
-            // mesma
-
-            for (int i = 0; i < N; i++) 
-            {
-
-
-                vet[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            
-            
-            }
-
-            for (int i = 0; i < N;i++) 
-            {
-
-
-                Console.WriteLine(vet[i].ToString("F1", CultureInfo.InvariantCulture));
-
-            
-            }
-
-        Console.ReadLine();
+        
 
         }
 
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            int N;
+//            N = int.Parse(Console.ReadLine()); 
+
+//            String[] nomes = new string[N];
+//            int[] idades = new int[N];
+//            double[] altura = new double[N];
+
+
+//            // Leituras dos dados
+//            for (int i = 0; i < N; i++) 
+//            {
+
+//                string[] s = Console.ReadLine().Split(' ');
+//                nomes[i] = s[0];
+//                idades[i] = int.Parse(s[1]);
+//                altura[i] = double.Parse(s[2], CultureInfo.InvariantCulture);
+
+
+//            }
+
+//            // Calculo da altura media das pessoas
+//            double soma = 0.0;
+//            for (int i = 0; i < N; i++) 
+//            {
+
+//                soma = soma + altura[i];
+
+
+//            }
+
+//            double media = soma / N;
+//            Console.WriteLine("Altura media: " + media.ToString("F2", CultureInfo.InvariantCulture));
+
+//            // Porcentagem de pessoas abaixo de 16 anos
+//            int cont = 0;
+//            for (int i = 0; i < N; i++) 
+//            {
+
+
+//                if (idades[i] < 16) 
+//                {
+
+//                    cont++; // isso é igual a cont = cont + 1
+
+
+//                }
+
+
+//            }
+
+//            double porcentagem = (double) cont / N * 100.0; // (double) isso garante que os dados não sejam truncados
+//            Console.WriteLine("Pessoas com menos de 16 anos: " + porcentagem.ToString("F1", CultureInfo.InvariantCulture) + "%");
+
+//            Console.Read();
+
+
+
+//        }
+
+//    }
+
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+
+//            int N;
+//            double[] vet; //declaração da variavel vetor
+
+//            N = int.Parse(Console.ReadLine());
+
+//            vet = new double[N]; //instanciação da variavel vetor
+
+//            // OBS: a instanciação da variavel vetor deverá ser ocorrer depois da coleta das informações da 
+//            // mesma
+
+//            for (int i = 0; i < N; i++) 
+//            {
+
+
+//                vet[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+//            }
+
+//            for (int i = 0; i < N;i++) 
+//            {
+
+
+//                Console.WriteLine(vet[i].ToString("F1", CultureInfo.InvariantCulture));
+
+
+//            }
+
+//        Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
 
 
 

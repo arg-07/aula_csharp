@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vibe\\Desktop\\Git Repo\\PrimeiraAula\\PrimeiraAula\\PrimeiraAula.csproj",
+      "projectUniqueName": "C:\\Users\\vibe\\Source\\Repos\\arg-07\\aula_csharp\\PrimeiraAula\\PrimeiraAula\\PrimeiraAula.csproj",
       "projectName": "PrimeiraAula",
-      "projectPath": "C:\\Users\\vibe\\Desktop\\Git Repo\\PrimeiraAula\\PrimeiraAula\\PrimeiraAula.csproj",
+      "projectPath": "C:\\Users\\vibe\\Source\\Repos\\arg-07\\aula_csharp\\PrimeiraAula\\PrimeiraAula\\PrimeiraAula.csproj",
       "packagesPath": "C:\\Users\\vibe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vibe\\Desktop\\Git Repo\\PrimeiraAula\\PrimeiraAula\\obj\\",
+      "outputPath": "C:\\Users\\vibe\\Source\\Repos\\arg-07\\aula_csharp\\PrimeiraAula\\PrimeiraAula\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
