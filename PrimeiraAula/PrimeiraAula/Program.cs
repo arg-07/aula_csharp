@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Globalization;
 
 namespace Course
@@ -11,15 +9,120 @@ namespace Course
         {
 
 
-            
+            int M, N;
+            int[,] A; // declarando variável do tipo matriz
 
-        Console.ReadLine();
+            String[] s1 = Console.ReadLine().Split(' ');
+            M = int.Parse(s1[0]);
+            N = int.Parse(s1[1]);
+
+            A = new int[M, N]; // instanciando a varável do tipo matriz
+
+            for (int i = 0; i < M; i++) // esse for percorre as linhas da minha matriz coletando os valores
+            {
+
+
+                String[] s = Console.ReadLine().Split(' ');
+
+                for (int j = 0; j < N; j++) // esse for percorre as colunas da minha matriz coletando os valores
+                {
+
+
+                    A[i, j] = int.Parse(s[j]);
+
+                }
+
+
+            }
+
+            for (int i = 0; i < M; i++) // esse for percorre as linhas da matriz gerdada e apresenta na tela os resultados
+            {
+
+
+                for (int j = 0; j < N; j++) // esse for percorre as colunas da matriz gerada e apresenta na tela os resultados
+                {
+
+
+                    Console.Write(A[i, j] + " ");
+
+
+                }
+
+                Console.WriteLine();
+
+
+
+            }
+
+            Console.ReadLine();
 
         }
 
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+
+//            int M, N;
+//            int[,] A; // declarando variável do tipo matriz
+
+//            M = int.Parse(Console.ReadLine());
+//            N = int.Parse(Console.ReadLine());
+
+//            A = new int[M, N]; // instanciando a varável do tipo matriz
+
+//            Console.ReadLine();
+
+//            for (int i = 0; i < N; i++) { }
+
+
+
+//        }
+
+//    }
+
+//}
 
 
 
