@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.Globalization;
 
@@ -10,14 +11,15 @@ namespace Course
         {
 
 
-            int idade = 32;
-            double saldo = 10.35784;
-            String nome = "Maria";
+            int a = 10;
+            Console.WriteLine(a);
 
+            a += 2;
+            Console.WriteLine(a);
 
-            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F2} Reais", nome, idade, saldo);
-            Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais");
-            Console.WriteLine(nome + " Tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2") + " Reais");
+            a *= 3;
+            Console.WriteLine(a);
+
             Console.ReadLine();
 
         }
@@ -25,6 +27,56 @@ namespace Course
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+
+//            int idade = 32;
+//            double saldo = 10.35784;
+//            String nome = "Maria";
+
+
+//            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F2} Reais", nome, idade, saldo);
+//            Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais");
+//            Console.WriteLine(nome + " Tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2") + " Reais");
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
 
 
 
