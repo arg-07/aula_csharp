@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using System;
+using System.Globalization;
 
 namespace Course
 {
@@ -8,18 +10,14 @@ namespace Course
         {
 
 
-            sbyte n1 = 126;
-            int n2 = 1000;
-            int n3 = 1200;
-            long n4 = 2147483; 
+            int idade = 32;
+            double saldo = 10.35784;
+            String nome = "Maria";
 
-            n1++;
 
-            Console.WriteLine(n1);
-            Console.WriteLine(n2);
-            Console.WriteLine(n4);
-            Console.WriteLine(n3);
-
+            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F2} Reais", nome, idade, saldo);
+            Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais");
+            Console.WriteLine(nome + " Tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2") + " Reais");
             Console.ReadLine();
 
         }
@@ -27,6 +25,104 @@ namespace Course
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+
+//            int idade = 32;
+//            double saldo = 10.35784;
+//            String nome = "Maria";
+
+
+//            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F2} Reais", nome, idade, saldo);
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
+
+
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+
+//            sbyte n1 = 126;
+//            int n2 = 1000;
+//            int n3 = 1200;
+//            long n4 = 2147483;
+//            bool n5 = true;
+//            char n6 = 'f';
+//            float n7 = 4.5f;
+//            double n8 = 4.5;
+//            String n9 = "Paulo";
+
+//            double n11 = 4.54576;
+
+
+
+//            int n10 = int.MinValue;
+
+
+//            n1++;
+
+//            Console.WriteLine(n1);
+//            Console.WriteLine(n2);
+//            Console.WriteLine(n4);
+//            Console.WriteLine(n3);
+//            Console.WriteLine(n5);
+//            Console.WriteLine(n9);
+//            Console.WriteLine(n10);
+//            Console.Write(n7);
+//            Console.WriteLine(n11.ToString("F2", CultureInfo.InvariantCulture));
+
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
 
 
 
