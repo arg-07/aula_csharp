@@ -8,11 +8,17 @@ namespace Course
         {
 
 
-            byte n1 = 126;
+            sbyte n1 = 126;
+            int n2 = 1000;
+            int n3 = 1200;
+            long n4 = 2147483; 
 
             n1++;
 
             Console.WriteLine(n1);
+            Console.WriteLine(n2);
+            Console.WriteLine(n4);
+            Console.WriteLine(n3);
 
             Console.ReadLine();
 
