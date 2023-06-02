@@ -1,5 +1,4 @@
 ﻿
-
 using System;
 using System.Globalization;
 
@@ -9,23 +8,28 @@ namespace Course
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("Entre com o valor inteiro:");
+            int x = int.Parse(Console.ReadLine());
+
+            int y;
+
+            y = x % 2;
+           
+            if (y == 0) 
+            {
+
+                Console.WriteLine("Par");
             
-        int n1 = int.Parse(Console.ReadLine());
-        char ch = char.Parse(Console.ReadLine());
-        double n2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            }
+            else 
+            {
 
-            string[] vet = Console.ReadLine().Split(' ');
-            string[] nome = vet[0];
-            string[] sexo = char.Parse(vet[1]);
-            int idade = int.Parse(vet[2]);
-            double altura = double.Parse(vet[3], CultureInfo.InvariantCulture);
+                Console.WriteLine("Impar");
 
 
 
-            Console.WriteLine(n2.ToString("F2", CultureInfo.InvariantCulture));
-            Console.WriteLine(nome);
-            Console.WriteLine(sexo);
-            Console.WriteLine(altura);
+            }
 
             Console.ReadLine();
 
@@ -34,6 +38,95 @@ namespace Course
     }
 
 }
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+
+//            int a = 10;
+//            bool c1 = a < 10;
+
+//            bool c7 = a == 10;
+
+//            bool c10 = 4 != 1;
+
+//            bool c11 = 2 > 3 && 4 != 5;
+
+//            bool c12 = 2 > 3 || 4 != 5;
+
+//            Console.WriteLine(c1);
+//            Console.WriteLine(c7);
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//        int n1 = int.Parse(Console.ReadLine());
+//        char ch = char.Parse(Console.ReadLine());
+//        double n2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+//            string[] vet = Console.ReadLine().Split(' ');
+//            string[] nome = vet[0];
+//            string[] sexo = char.Parse(vet[1]);
+//            int idade = int.Parse(vet[2]);
+//            double altura = double.Parse(vet[3], CultureInfo.InvariantCulture);
+
+
+
+//            Console.WriteLine(n2.ToString("F2", CultureInfo.InvariantCulture));
+//            Console.WriteLine(nome);
+//            Console.WriteLine(sexo);
+//            Console.WriteLine(altura);
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
 
 
 
