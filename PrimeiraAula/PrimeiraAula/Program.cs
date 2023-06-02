@@ -9,27 +9,24 @@ namespace Course
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Entre com o valor inteiro:");
+            Console.WriteLine("qual a hora atual?");
             int x = int.Parse(Console.ReadLine());
 
-            int y;
 
-            y = x % 2;
-           
-            if (y == 0) 
+            if (x < 12)
             {
 
-                Console.WriteLine("Par");
-            
+                Console.WriteLine("Bom Dia!");
+
             }
-            else 
+            else if (x < 18)
             {
 
-                Console.WriteLine("Impar");
-
-
+                Console.WriteLine("Boa Tarde!");
 
             }
+            else { Console.WriteLine("Boa Noite!"); }
+
 
             Console.ReadLine();
 
@@ -38,6 +35,70 @@ namespace Course
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Console.WriteLine("Entre com o valor inteiro:");
+//            int x = int.Parse(Console.ReadLine());
+
+//            int y;
+
+//            y = x % 2;
+
+//            if (y == 0) 
+//            {
+
+//                Console.WriteLine("Par");
+
+//            }
+//            else 
+//            {
+
+//                Console.WriteLine("Impar");
+
+
+
+//            }
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
 
 
 
