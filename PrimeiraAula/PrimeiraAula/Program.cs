@@ -10,28 +10,70 @@ namespace Course
         static void Main(string[] args)
         {
 
-            Console.Write("Digite um número:");
-            double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Quantos números inteiros voce vai digitar?");
+            int N = int.Parse(Console.ReadLine());
 
+            int soma = 0;
 
-            while (x >= 0.0) 
-            { 
+            for (int i = 1; i <= N; i++) 
+            {
 
-                double raiz = Math.Sqrt(x);
-                Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
-                Console.WriteLine("Digite outro número:");
-                x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                Console.WriteLine("valor #{0}: ", i);
+                int valor = int.Parse(Console.ReadLine());
+                soma = soma + valor;
+
 
 
             }
 
-            Console.WriteLine("Número negativo!");
+            Console.WriteLine("Soma = " + soma);
+            Console.ReadLine();
 
         }
 
     }
 
 }
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Console.Write("Digite um número:");
+//            double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+//            while (x >= 0.0) 
+//            { 
+
+//                double raiz = Math.Sqrt(x);
+//                Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
+//                Console.WriteLine("Digite outro número:");
+//                x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+
+//            }
+
+//            Console.WriteLine("Número negativo!");
+
+//        }
+
+//    }
+
+//}
 
 
 //using System;
