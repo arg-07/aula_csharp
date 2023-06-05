@@ -1,4 +1,5 @@
 ﻿
+
 using System;
 using System.Globalization;
 
@@ -9,20 +10,28 @@ namespace Course
         static void Main(string[] args)
         {
 
+            Console.Write("Digite um número:");
+            double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            
 
-        Console.ReadLine();
+            while (x >= 0.0) 
+            { 
+
+                double raiz = Math.Sqrt(x);
+                Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
+                Console.WriteLine("Digite outro número:");
+                x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+
+            }
+
+            Console.WriteLine("Número negativo!");
 
         }
 
     }
 
 }
-
-
-
-
 
 
 //using System;
@@ -51,21 +60,22 @@ namespace Course
 //        }
 
 
-//        static int Maior(int a, int b, int c) {
+//        static int Maior(int a, int b, int c)
+//        {
 
 //            int m;
 
-//            if (a > b && a > c) 
-//            { 
+//            if (a > b && a > c)
+//            {
 
 //                m = a;
 
 //            }
-//            else if (b > c) 
+//            else if (b > c)
 //            {
-//                m = b; 
+//                m = b;
 //            }
-//            else {m = c;}
+//            else { m = c; }
 
 //            return m;
 
