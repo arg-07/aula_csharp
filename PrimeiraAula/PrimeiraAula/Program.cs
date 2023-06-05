@@ -9,32 +9,157 @@ namespace Course
         static void Main(string[] args)
         {
 
-            Console.WriteLine("qual a hora atual?");
-            int x = int.Parse(Console.ReadLine());
 
+            
 
-            if (x < 12)
-            {
-
-                Console.WriteLine("Bom Dia!");
-
-            }
-            else if (x < 18)
-            {
-
-                Console.WriteLine("Boa Tarde!");
-
-            }
-            else { Console.WriteLine("Boa Noite!"); }
-
-
-            Console.ReadLine();
+        Console.ReadLine();
 
         }
 
     }
 
 }
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Console.WriteLine("digite três números:");
+//            int n1 = int.Parse(Console.ReadLine());
+//            int n2 = int.Parse(Console.ReadLine());
+//            int n3 = int.Parse(Console.ReadLine());
+
+//            int resultado = Maior(n1, n2, n3);
+
+//            Console.WriteLine("Maior = " + resultado);
+
+
+
+//            Console.ReadLine();
+
+//        }
+
+
+//        static int Maior(int a, int b, int c) {
+
+//            int m;
+
+//            if (a > b && a > c) 
+//            { 
+
+//                m = a;
+
+//            }
+//            else if (b > c) 
+//            {
+//                m = b; 
+//            }
+//            else {m = c;}
+
+//            return m;
+
+
+//        }
+
+
+
+//    }
+
+//}
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Console.WriteLine("digite três números:");
+//            int n1 = int.Parse(Console.ReadLine());
+//            int n2 = int.Parse(Console.ReadLine());
+//            int n3 = int.Parse(Console.ReadLine());
+
+//            if (n1 > n2 && n1 > n3) 
+//            {
+//                Console.WriteLine("Mairo igual:" + " " + n1);
+
+//            }
+//            else if (n2 > n3) 
+//            { 
+//                Console.WriteLine("Maior é o" + " " + n2); 
+//            }
+//            else { Console.WriteLine("Maior é o:" + " " + n3); }
+
+
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
+
+
+
+
+
+
+
+
+//using System;
+//using System.Globalization;
+
+//namespace Course
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+
+//            Console.WriteLine("qual a hora atual?");
+//            int x = int.Parse(Console.ReadLine());
+
+
+//            if (x < 12)
+//            {
+
+//                Console.WriteLine("Bom Dia!");
+
+//            }
+//            else if (x < 18)
+//            {
+
+//                Console.WriteLine("Boa Tarde!");
+
+//            }
+//            else { Console.WriteLine("Boa Noite!"); }
+
+
+//            Console.ReadLine();
+
+//        }
+
+//    }
+
+//}
 
 
 
